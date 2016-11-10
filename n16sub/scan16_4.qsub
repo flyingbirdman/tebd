@@ -1,0 +1,9 @@
+#!/bin/bash                                                                     
+echo "Start at 'data'"
+
+for val in $(ls ./n16sub/*L16N16U1t01*)
+do
+	./Execute_ITP -f $val
+done
+
+echo "End at `date`; Spin1/2 ITP of t0 search is done" | mail -s "Simulation" yangkai0208@gmail.com
